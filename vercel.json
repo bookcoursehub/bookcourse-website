@@ -1,0 +1,25 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/sia-door-supervisor-course", "destination": "/courses/sia-door-supervisor", "permanent": true },
+    { "source": "/sia-security-guard-course", "destination": "/courses/sia-security-guard", "permanent": true },
+    { "source": "/sia-cctv-course", "destination": "/courses/sia-cctv", "permanent": true },
+    { "source": "/sia-trainer-instructor-course-london", "destination": "/courses/sia-trainer-instructor", "permanent": true },
+    { "source": "/forklift-training-course", "destination": "/courses/forklift-training", "permanent": true },
+    { "source": "/cpcs-traffic-marshall-a73", "destination": "/courses/cpcs-traffic-marshall-a73", "permanent": true },
+    { "source": "/cscs-card-course-health-safety-test", "destination": "/courses/cscs-card", "permanent": true },
+    { "source": "/traffic-marshall-course-online", "destination": "/courses/traffic-marshall-online", "permanent": true },
+    { "source": "/emergency-first-aid-at-work-london", "destination": "/courses/emergency-first-aid", "permanent": true },
+    { "source": "/book-sia-refresher-training", "destination": "/courses/sia-door-supervisor-refresher", "permanent": true },
+    { "source": "/sia-refresher-training-for-security-guard-in-london", "destination": "/courses/sia-security-guard-refresher", "permanent": true },
+    { "source": "/sia-training-courses-in-london-greenwich", "destination": "/locations/greenwich", "permanent": true },
+    { "source": "/sia-training-course-in-london-east-london", "destination": "/locations/east-london", "permanent": true },
+    { "source": "/sia-training-courses-in-park-royal", "destination": "/locations/park-royal", "permanent": true },
+    { "source": "/about-bookcourse", "destination": "/about", "permanent": true },
+    { "source": "/contact-us", "destination": "/contact", "permanent": true },
+    { "source": "/privacy-policy-terms", "destination": "/privacy-policy", "permanent": true },
+    { "source": "/terms-conditions", "destination": "/terms", "permanent": true },
+    { "source": "/refund-policy", "destination": "/refund-policy", "permanent": false }
+  ]
+}
