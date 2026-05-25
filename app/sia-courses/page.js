@@ -1,29 +1,14 @@
+import Link from "next/link";
 import CourseCard from "../components/CourseCard";
 import { coursesByCategory } from "@/lib/courses";
 
 export const metadata = {
   title: "SIA Courses",
-  description: "Accredited SIA Door Supervisor, Security Guard, CCTV and Trainer courses across London."
+  description: "Explore SIA courses including Door Supervisor, Security Guard, CCTV, Refresher & Trainer Instructor training. Book your course today."
 };
 
-export default function SIACourses() {
-  const list = coursesByCategory("SIA");
-  return (
-    <>
-      <section className="hero-gradient text-white py-16">
-        <div className="container-px mx-auto max-w-7xl">
-          <p className="text-sm font-semibold text-accent-500 uppercase tracking-wider">SIA Approved</p>
-          <h1 className="text-4xl md:text-5xl font-extrabold mt-2">SIA Security Training Courses</h1>
-          <p className="mt-4 text-slate-200 max-w-2xl">Get the SIA Door Supervisor, Security Guard or CCTV licence you need to work in UK security. Accredited courses, expert trainers, real jobs at the end.</p>
-        </div>
-      </section>
-      <section className="py-16">
-        <div className="container-px mx-auto max-w-7xl">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {list.map((c) => <CourseCard key={c.slug} course={c} />)}
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}
+const faqs = [
+  { q: "Who can benefit from these courses?", a: "These SIA courses are perfect for anyone looking to start or grow a career in security - whether it's as a Door Supervisor, Security Guard, CCTV Operator, or even a Trainer." },
+  { q: "What experience is required to enroll in these courses?", a: "Most SIA courses don't need any prior experience. You just need to be 18+, have the right to work in the UK, and a good level of English." },
+  { q: "Are these courses available online, or do I need to attend in person?", a: "All SIA courses, including Door Supervisor, Security Guard, CCTV, and Trainer Instructor, must be attended in person due to mandatory practical assessments." },
+  { q: "How long does it take to complete each course?", a: "SIA Door Supervisor - 6 days. SIA Security Guard - 4 days. SIA CCTV Course - 3 days. SIA Refresher Training - 2 days. SIA

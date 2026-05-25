@@ -2,29 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
 
 html { scroll-behavior: smooth; }
-body { background: #fff; color: #0f172a; font-family: 'Inter', system-ui, sans-serif; }
+body {
+  background: #FFFFFF;
+  color: #555555;
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5 { font-family: 'Manrope', sans-serif; letter-spacing: -0.01em; }
+/* Broken/loading images on cards — hide ugly browser icon and show clean placeholder */
+img { color: transparent; }
 
 .container-px { @apply px-4 sm:px-6 lg:px-8; }
 
-.btn { @apply inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2; }
-.btn-primary { @apply btn bg-brand-700 hover:bg-brand-800 text-white px-6 py-3 focus:ring-brand-500 shadow-md hover:shadow-lg; }
-.btn-accent { @apply btn bg-accent-500 hover:bg-accent-600 text-white px-6 py-3 focus:ring-accent-500 shadow-md; }
-.btn-outline { @apply btn border-2 border-brand-700 text-brand-700 hover:bg-brand-700 hover:text-white px-6 py-3; }
-.btn-ghost { @apply btn text-brand-700 hover:bg-brand-50 px-4 py-2; }
+.btn { @apply inline-flex items-center justify-center font-semibold rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2; }
+.btn-primary { @apply btn bg-brand-700 hover:bg-brand-800 text-white px-7 py-3.5 text-[14px] tracking-wide; }
+.btn-accent { @apply btn bg-accent-500 hover:bg-accent-600 text-white px-7 py-3.5 text-[14px] tracking-wide; }
+.btn-outline { @apply btn border border-accent-500 text-accent-600 hover:bg-accent-50 px-7 py-3.5 text-[14px] tracking-wide; }
+.btn-outline-white { @apply btn border border-white/40 text-white hover:bg-white hover:text-brand-900 px-7 py-3.5 text-[14px] tracking-wide; }
+.btn-ghost { @apply btn text-accent-600 hover:bg-accent-50 px-4 py-2.5 text-[14px]; }
 
-.card { @apply bg-white rounded-2xl shadow-sm hover:shadow-xl transition-shadow border border-slate-100 overflow-hidden; }
+.card { @apply bg-white rounded-lg border border-ink-200 transition-all duration-200 overflow-hidden; }
+.card:hover { box-shadow: 0 10px 25px -8px rgba(17,17,17,0.12); transform: translateY(-2px); }
 
-.hero-gradient {
-  background:
-    radial-gradient(1200px 600px at 10% 0%, rgba(59,130,246,0.18), transparent 60%),
-    radial-gradient(900px 500px at 90% 30%, rgba(245,158,11,0.18), transparent 60%),
-    linear-gradient(180deg, #06183A 0%, #0B2A5B 60%, #0B2A5B 100%);
+.hero-bg, .hero-gradient {
+  background: linear-gradient(135deg, #161D26 0%, #2C3E48 55%, #3D5663 100%);
 }
 
-.prose-brand h2 { @apply text-2xl md:text-3xl font-bold text-slate-900 mt-8 mb-3; }
-.prose-brand h3 { @apply text-xl font-semibold text-slate-900 mt-6 mb-2; }
-.prose-brand p { @apply text-slate-700 leading-relaxed mb-4; }
-.prose-brand ul { @apply list-disc pl-6 mb-4 text-slate-700 space-y-1; }
+.eyebrow {
+  display: inline-block;
+  color: #0A95CD;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.section-heading {
+  font-family: 'Manrope', sans-serif;
+  font-size: 42px;
+  font-weight: 500;
+  color: #111111;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+}
+.section-sub {
+  font-family: 'Manrope', sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  color: #7B8590;
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+.prose-brand h2 { @apply font-display text-2xl md:text-3xl font-semibold text-ink-900 mt-10 mb-3; letter-spacing: -0.01em; }
+.prose-brand h3 { @apply font-display text-xl font-semibold text-ink-900 mt-7 mb-2; }
+.prose-brand p { @apply text-ink-600 leading-[1.8] mb-5 text-[17px]; }
+.prose-brand ul { @apply mb-5 text-ink-600 space-y-2 pl-0; }
+.prose-brand ul li { @apply pl-6 relative leading-[1.7]; }
+.prose-brand ul li::before { content: ""; position: absolute; left: 0; top: 0.7em; width: 8px; height: 8px; background: #0A95CD;

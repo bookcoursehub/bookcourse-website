@@ -3,42 +3,40 @@ import { site } from "@/lib/site";
 
 export const metadata = {
   title: "About BookCourse",
-  description: "BookCourse.co.uk is a UK training provider for SIA security, construction and first aid courses."
+  description: "Learn about BookCourse, the platform offering interactive book-based learning experiences to help you grow and succeed."
 };
 
 export default function AboutPage() {
   return (
     <>
-      <section className="hero-gradient text-white py-20">
+      {/* HERO */}
+      <section className="hero-bg text-white py-20">
         <div className="container-px mx-auto max-w-5xl text-center">
-          <p className="text-sm font-semibold text-accent-500 uppercase tracking-wider">About us</p>
-          <h1 className="text-4xl md:text-5xl font-extrabold mt-2">Your pathway to professional success</h1>
-          <p className="mt-5 text-slate-200 max-w-3xl mx-auto">At BookCourse.co.uk we deliver accredited, expert-led training to help thousands of learners launch and advance careers in security, construction and first aid.</p>
+          <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-accent-500 text-white text-[11px] uppercase tracking-[0.18em] font-bold rounded">
+            Welcome to BookCourse.co.uk
+          </span>
+          <h1 className="font-display text-4xl md:text-5xl lg:text-[3.4rem] font-bold mt-6 leading-tight">Discover the Essence of BookCourse</h1>
+          <p className="mt-5 text-ink-200 max-w-3xl mx-auto text-[17px] leading-relaxed">At BookCourse.co.uk we deliver accredited, expert-led training to help thousands of learners launch and advance careers in security, construction and first aid.</p>
         </div>
       </section>
-      <section className="py-16">
-        <div className="container-px mx-auto max-w-5xl prose-brand">
-          <h2>Who we are</h2>
-          <p>BookCourse is a London-based training provider working with industry-recognised awarding bodies (Highfield, CPCS, RTITB and HSE) to deliver practical, career-focused training. We run our SIA, construction and first aid courses from multiple centres across London and online.</p>
-          <h2>What we believe</h2>
-          <ul>
-            <li>Training should lead to a real job, not just a certificate</li>
-            <li>Schedules should fit around your life, not the other way around</li>
-            <li>Trainers should come from the industry they're teaching</li>
-            <li>Price shouldn't be a barrier to a better career</li>
-          </ul>
-          <h2>What we offer</h2>
-          <ul>
-            <li>SIA Door Supervisor, Security Guard, CCTV and Trainer courses</li>
-            <li>SIA Refresher / Top-up courses with Emergency First Aid at Work</li>
-            <li>Forklift, CPCS A73 traffic marshall, CSCS card preparation</li>
-            <li>Emergency First Aid at Work (EFAW) certification</li>
-            <li>Online and in-person delivery in Greenwich, East London and Park Royal</li>
-          </ul>
-          <h2>Get in touch</h2>
-          <p>Want to talk to an advisor about which course is right for you? <Link className="text-brand-700 font-semibold underline" href="/contact">Contact us</Link> or call <a className="text-brand-700 font-semibold" href={`tel:${site.phoneRaw}`}>{site.phone}</a>.</p>
-        </div>
-      </section>
-    </>
-  );
-}
+
+      {/* WHO WE ARE */}
+      <section className="py-24 bg-white">
+        <div className="container-px mx-auto max-w-7xl grid lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-6">
+            <span className="eyebrow">Who We Are</span>
+            <h2 className="section-heading mt-3">Empowering learners across the UK</h2>
+            <p className="text-ink-600 mt-6 leading-[1.8] text-[16px]">
+              At BookCourse.co.uk, we are dedicated to empowering individuals with the skills and knowledge needed to excel in their careers. You'll discover a wide range of training programs that cater to various industries, from security to construction and beyond. Our programs focus on practical, hands-on learning and expert instruction.
+            </p>
+            <p className="text-ink-600 mt-4 leading-[1.8] text-[16px]">
+              We aim to make education accessible and impactful for everyone. Join us on a journey of growth and success as you take the next step in your professional development.
+            </p>
+            <Link href="/sia-courses" className="btn-accent mt-7">View All SIA Courses</Link>
+          </div>
+          <div className="lg:col-span-6">
+            <img
+              src="https://bookcourse.co.uk/wp-content/uploads/2024/11/About-Bookcourse.webp"
+              alt="About BookCourse"
+              className="w-full rounded-lg shadow-lg"
+      

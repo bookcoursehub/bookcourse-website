@@ -1,29 +1,18 @@
+import Link from "next/link";
 import CourseCard from "../components/CourseCard";
 import { coursesByCategory } from "@/lib/courses";
 
 export const metadata = {
   title: "SIA Refresher Training",
-  description: "Renew your SIA Door Supervisor or Security Guard licence with our top-up courses including Emergency First Aid at Work."
+  description: "Renew your SIA Door Supervisor or Security Guard licence with our combined Refresher + First Aid courses across London."
 };
 
-export default function RefresherCourses() {
-  const list = coursesByCategory("SIA Refresher");
-  return (
-    <>
-      <section className="hero-gradient text-white py-16">
-        <div className="container-px mx-auto max-w-7xl">
-          <p className="text-sm font-semibold text-accent-500 uppercase tracking-wider">Licence Renewal</p>
-          <h1 className="text-4xl md:text-5xl font-extrabold mt-2">SIA Refresher Training</h1>
-          <p className="mt-4 text-slate-200 max-w-2xl">All SIA Door Supervisor and Security Guard licences require a top-up at renewal. Get yours done in 1-2 days, with First Aid at Work included.</p>
-        </div>
-      </section>
-      <section className="py-16">
-        <div className="container-px mx-auto max-w-7xl">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {list.map((c) => <CourseCard key={c.slug} course={c} />)}
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}
+const faqs = [
+  { q: "Do I need a refresher to renew my SIA licence?", a: "Yes. Since 2021 the SIA requires a top-up qualification when renewing a Door Supervisor or Security Guard licence. We offer combined refresher courses that include Emergency First Aid at Work." },
+  { q: "How long does the refresher course take?", a: "SIA Door Supervisor Refresher takes 2 days. SIA Security Guard Refresher takes 1 day. Both include Emergency First Aid at Work." },
+  { q: "When should I book my refresher?", a: "Book your refresher up to 4 months before your current SIA licence expires. This gives you time to complete training and submit your renewal application before the licence expires." },
+  { q: "What does the refresher cover?", a: "Top-up training on conflict management and physical intervention, the latest ACT (counter-terrorism) updates, plus Emergency First Aid at Work." }
+];
+
+export default function SIARefresher() {
+ 
