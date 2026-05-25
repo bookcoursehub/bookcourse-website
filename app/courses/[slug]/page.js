@@ -19,6 +19,7 @@ export default function CoursePage({ params }) {
   const course = getCourse(params.slug);
   if (!course) notFound();
   const related = courses.filter((c) => c.category === course.category && c.slug !== course.slug).slice(0, 3);
+  const bookHref = course.bookUrl || "#enquire";
 
   return (
     <>
@@ -40,7 +41,7 @@ export default function CoursePage({ params }) {
               </div>
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#enquire" className="btn-accent">Book This Course</a>
+              <a href={bookHref} target="_blank" rel="noopener noreferrer" className="btn-accent">Book This Course</a>
               <a href={`tel:${site.phoneRaw}`} className="btn-outline-white">Call {site.phone}</a>
             </div>
           </div>
@@ -65,13 +66,15 @@ export default function CoursePage({ params }) {
             </ul>
           </div>
           <aside className="space-y-6" id="enquire">
-            <div className="card p-6">
-              <h3 className="font-display text-[19px] font-bold text-ink-900">Quick facts</h3>
-              <dl className="mt-5 space-y-3 text-[14px]">
-                <div className="flex justify-between border-b border-ink-200 pb-3"><dt className="text-ink-500">Duration</dt><dd className="font-semibold text-ink-900">{course.duration}</dd></div>
-                <div className="flex justify-between border-b border-ink-200 pb-3"><dt className="text-ink-500">Price</dt><dd className="font-semibold text-ink-900">£{course.price.toFixed(2)}</dd></div>
-                <div className="flex justify-between border-b border-ink-200 pb-3"><dt className="text-ink-500">Category</dt><dd className="font-semibold text-ink-900">{course.category}</dd></div>
-                <div className="flex justify-between"><dt className="text-ink-500">Format</dt><dd className="font-semibold text-ink-900">In-person and online</dd></div>
+            <div className="card p-6 sticky top-24">
+              <div className="text-[11px] uppercase tracking-wider text-ink-500 font-bold">Price from</div>
+              <div className="font-display text-[36px] font-extrabold text-ink-900 leading-none mt-1">£{course.price.toFixed(2)}</div>
+              <a href={bookHref} target="_blank" rel="noopener noreferrer" className="btn-accent w-full mt-5">Book This Course</a>
+              <a href={`tel:${site.phoneRaw}`} className="btn-outline w-full mt-2">Call to Book</a>
+              <dl className="mt-5 pt-5 border-t border-ink-200 space-y-3 text-[14px]">
+                <div className="flex justify-between"><dt className="text-ink-500">Duration</dt><dd className="font-semibold text-ink-900">{course.duration}</dd></div>
+                <div className="flex justify-between"><dt className="text-ink-500">Category</dt><dd className="font-semibold text-ink-900">{course.category}</dd></div>
+                <div className="flex justify-between"><dt className="text-ink-500">Format</dt><dd className="font-semibold text-ink-900">In-person</dd></div>
               </dl>
             </div>
             <ContactForm compact />

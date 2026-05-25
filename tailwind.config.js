@@ -51,11 +51,4 @@ module.exports = {
         display: ["Manrope", "ui-sans-serif", "system-ui", "sans-serif"]
       },
       boxShadow: {
-        soft: "0 1px 2px rgba(17,17,17,0.04), 0 4px 12px rgba(17,17,17,0.05)",
-        elegant: "0 4px 6px -1px rgba(17,17,17,0.06), 0 10px 25px -3px rgba(17,17,17,0.08)",
-        lift: "0 20px 40px -12px rgba(17,17,17,0.15)"
-      }
-    }
-  },
-  plugins: []
-};
+        soft: "0 1px 2px rgba(17,17,17,0.04), 0 4px 12px rgba(17,17,17
