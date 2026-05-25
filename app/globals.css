@@ -65,4 +65,5 @@ img { color: transparent; }
 .prose-brand p { @apply text-ink-600 leading-[1.8] mb-5 text-[17px]; }
 .prose-brand ul { @apply mb-5 text-ink-600 space-y-2 pl-0; }
 .prose-brand ul li { @apply pl-6 relative leading-[1.7]; }
-.prose-brand ul li::before { content: ""; position: absolute; left: 0; top: 0.7em; width: 8px; height: 8px; background: #0A95CD;
+.prose-brand ul li::before { content: ""; position: absolute; left: 0; top: 0.7em; width: 8px; height: 8px; background: #0A95CD; border-radius: 2px; }
+.prose-brand a { @apply text-accent-600 underline underline-offset-2; }
